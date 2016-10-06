@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.avril.todolistapplication.MainActivity"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="155dp">
+
+        <TextView
+            android:text="To Do List"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoCorrect|textPersonName"
+            android:ems="20"
+            android:id="@+id/tastTitle"
+            android:hint="add a task title"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete|textPersonName"
+            android:ems="50"
+            android:layout_below="@+id/tastTitle"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:id="@+id/taskDescription"
+            android:hint="add task description" />
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="242dp"
+        android:id="@+id/tastList"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        tools:listitem="title"
+         />
+
+    <Button
+        android:text="Add"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addTask"
+        android:layout_weight="1"
+        android:layout_gravity="bottom|right"
+        android:onClick="addButtonClick" />
+</LinearLayout>
